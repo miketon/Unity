@@ -51,6 +51,9 @@ class Unit_IO_State extends Unit_XForm{
     if(control.isGrounded){
       jumpCnt   = 0             ;
       animState = animEnum.idle ;
+      if(Input.GetKey("down")){
+        animState = animEnum.duck ;
+      }
     }
     else if(control.velocity.y < -vy*3){
       // Debug.Log('Falling'+vy);

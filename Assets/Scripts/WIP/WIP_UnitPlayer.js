@@ -1,4 +1,4 @@
-class UnitPlayer_WIP extends Unit_WIP{
+class WIP_UnitPlayer extends WIP_Unit{
 
   private var xform:Transform;
 

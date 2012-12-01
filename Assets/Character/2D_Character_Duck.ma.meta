@@ -5,6 +5,10 @@ ModelImporter:
     4300000: Body
     4300002: Head
     4300004: Duck
+    4300006: body
+    4300008: head
+    7400000: Take 001 //// 2D_Character_Duck
+    7400002: idle //// 2D_Character_Duck
   serializedVersion: 10
   materials:
     importMaterials: 1
@@ -18,8 +22,13 @@ ModelImporter:
     animationRotationError: .5
     animationPositionError: .5
     animationScaleError: .5
-    animationWrapMode: 0
-    clipAnimations: []
+    animationWrapMode: 1
+    clipAnimations:
+    - name: idle
+      firstFrame: 1
+      lastFrame: 3
+      wrapMode: 1
+      loop: 0
   meshes:
     lODScreenPercentages: []
     globalScale: 1
@@ -47,11 +56,31 @@ ModelImporter:
         first: 4
         second: 841a0600
       data:
+        first: 111
+        second: 605fa900
+    body:
+      data:
+        first: 1
+        second: a0860100
+      data:
+        first: 4
+        second: 801a0600
+      data:
         first: 23
         second: 60182300
       data:
         first: 33
         second: a05a3200
+    head:
       data:
-        first: 111
-        second: 605fa900
+        first: 1
+        second: a2860100
+      data:
+        first: 4
+        second: 821a0600
+      data:
+        first: 23
+        second: 62182300
+      data:
+        first: 33
+        second: a25a3200

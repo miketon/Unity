@@ -1,11 +1,12 @@
 fileFormatVersion: 2
-guid: 66140b2f8094d4ddaa3670fa22d4a320
+guid: 1fe786ce00d464d4a84599854d42db05
 ModelImporter:
   fileIDToRecycleName:
-    4300000: pCone1
-    4300002: jump
-    7400000: Take 001 //// 2D_Character_Jump
-    7400002: idle //// 2D_Character_Jump
+    4300000: drill
+    4300002: Sphere
+    4300004: drillHead
+    7400000: Take 001 //// 2D_Character_Drill
+    7400002: idle //// 2D_Character_Drill
   serializedVersion: 10
   materials:
     importMaterials: 1
@@ -22,7 +23,7 @@ ModelImporter:
     animationWrapMode: 1
     clipAnimations:
     - name: idle
-      firstFrame: 1
+      firstFrame: 4
       lastFrame: 5
       wrapMode: 1
       loop: 0
@@ -53,11 +54,38 @@ ModelImporter:
         first: 4
         second: 801a0600
       data:
+        first: 111
+        second: 605fa900
+    Sphere:
+      data:
+        first: 1
+        second: a2860100
+      data:
+        first: 4
+        second: 821a0600
+      data:
         first: 23
         second: 60182300
       data:
         first: 33
         second: a05a3200
+    drillHead:
       data:
-        first: 111
-        second: 605fa900
+        first: 1
+        second: a4860100
+      data:
+        first: 4
+        second: 841a0600
+      data:
+        first: 23
+        second: 62182300
+      data:
+        first: 33
+        second: a25a3200
+    transform1:
+      data:
+        first: 1
+        second: a6860100
+      data:
+        first: 4
+        second: 861a0600

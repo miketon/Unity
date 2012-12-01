@@ -30,34 +30,35 @@ function LateUpdate () {                                       //Switching out a
     cState  = cObject.GetComponent(Unit_IO_State).animState ; //returns prefab animEnum 
     if(cState==animEnum.jump && pState!=animEnum.jump){
       cObject  = cObjectUpdate(pJump.tag) ;                    //must be tags, unable to determine instance name
-      pState   = animEnum.jump            ;
     }
     else if(cState==animEnum.idle && pState!=animEnum.idle){
       cObject  = cObjectUpdate(pIdle.tag) ;
-      pState   = animEnum.idle            ;
     }
     else if(cState==animEnum.duck && pState!=animEnum.duck){
       cObject = cObjectUpdate(pDuck.tag) ;
-      pState  = animEnum.duck            ;
     }
     else if(cState==animEnum.fall && pState!=animEnum.fall){
       cObject = cObjectUpdate(pFall.tag) ;
-      pState  = animEnum.fall            ;
+    }
+    else if(cState==animEnum.duck && pState!=animEnum.duck){
+      cObject = cObjectUpdate(pDuck.tag) ;
     }
   }
 }
 
 function cObjectUpdate(oTag){ //Watch out spaghetti side effects : cObject, Unit_IO_State and timeInit
-  cObject.active = false                                                                      ;
-  Destroy(cObject)                                                                            ;
-  var xformTemp   = cObject.transform                                                         ;
-  var gravityTemp = cObject.GetComponent(Unit_IO_State).gravity                              ;
-  cObject         = Instantiate(Resources.Load(oTag), xformTemp.position, xformTemp.rotation) ;
-  var unit        = cObject.GetComponent(Unit_IO_State)                                      ;
-  unit.gravity    = gravityTemp                                                               ;
-  kTimeD          = unit.kTime                                                                ;
-  timeInit        = resetTime()                                                               ;
-  return cObject                                                                              ;
+  cObject.active = false                                                                           ;
+  Destroy(cObject)                                                                                 ;
+  var xformTemp        = cObject.transform                                                         ;
+  xformTemp.position.z = -1.0                                                                      ;
+  var gravityTemp      = cObject.GetComponent(Unit_IO_State).gravity                               ;
+  cObject              = Instantiate(Resources.Load(oTag), xformTemp.position, xformTemp.rotation) ;
+  var unit             = cObject.GetComponent(Unit_IO_State)                                       ;
+  unit.gravity         = gravityTemp                                                               ;
+  kTimeD               = unit.kTime                                                                ;
+  timeInit             = resetTime()                                                               ;
+  pState               = cState                                                                    ;
+  return cObject                                                                                   ;
 }
 
 function resetTime(){
