@@ -3,6 +3,7 @@ enum animEnum{ //enumerates the possible state of player.  Outside of Class
   idle,
   dash,
   duck,
+  attk,
   jump
 }
 
@@ -68,6 +69,10 @@ class Unit_IO_State extends Unit{
       }
     }
     dash = Input.GetButton("Fire2");
+
+    if(Input.GetKey("up")){
+      animState = animEnum.attk;
+    }
 
     if(Input.GetButton("Fire1") && Time.time > nextFire){
       nextFire                 = Time.time + fireRate                                        ;
