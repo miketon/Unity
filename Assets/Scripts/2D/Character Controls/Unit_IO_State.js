@@ -6,7 +6,7 @@ enum animEnum{ //enumerates the possible state of player.  Outside of Class
   jump
 }
 
-class Unit_IO_State extends Unit_XForm{
+class Unit_IO_State extends Unit{
 
   static var initMe   : boolean = true ; //static == class variable?
   static var pCamera  : GameObject     ;

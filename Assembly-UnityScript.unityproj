@@ -50,9 +50,9 @@
      <Compile Include="Assets\Scripts\2D\Character Controls\PlatformerController.js" />
      <Compile Include="Assets\Scripts\2D\Character Controls\PlatformerPlayerAnimation.js" />
      <Compile Include="Assets\Scripts\2D\Character Controls\PlatformerPushBodies.js" />
+     <Compile Include="Assets\Scripts\2D\Character Controls\Unit.js" />
      <Compile Include="Assets\Scripts\2D\Character Controls\Unit_IO_State.js" />
      <Compile Include="Assets\Scripts\2D\Character Controls\Unit_Instances.js" />
-     <Compile Include="Assets\Scripts\2D\Character Controls\Unit_XForm.js" />
      <Compile Include="Assets\Scripts\2D\DeathTrigger.js" />
      <Compile Include="Assets\Scripts\2D\LevelAttributes.js" />
      <Compile Include="Assets\Scripts\2D\Moving Platform\MovingPlatformEffects.js" />
@@ -76,6 +76,7 @@
      <Compile Include="Assets\Scripts\WIP\WIP_UnitPlayer.js" />
      <None Include="Assets\Standard Assets\Toon Shading\Sources\Shaders\Toony-Basic.shader" />
      <None Include="Assets\Shaders\mton_CG.shader" />
+     <None Include="Assets\Audio\Effects\melee sounds\melee.txt" />
      <None Include="Assets\Shaders\mton_CG_Zbrush.shader" />
      <None Include="Assets\Standard Assets\Toon Shading\Sources\Shaders\Toony-BasicOutline.shader" />
      <None Include="Assets\Shaders\mton_Test.shader" />

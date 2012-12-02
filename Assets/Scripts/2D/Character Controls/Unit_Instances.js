@@ -1,10 +1,12 @@
+@script RequireComponent(AudioSource)
+
 private var cObject     : GameObject ; //Current object
 private var timeInit    : float      ;
 private var timeDelta   : float      ;
 private var kTimeD      : float      ; //State lock of current instance
 
 // Anim prefabs
-var pFall : GameObject ; //Be sure to tag each uniquely
+var pFall : GameObject ; //Be sure to name each and place in 'Resources' folder
 var pIdle : GameObject ; //And check that pill collider encompass bottom of mesh
 var pDash : GameObject ; //Else collision floor error
 var pDuck : GameObject ;
@@ -18,8 +20,12 @@ var animState = {
 var cState : animEnum;
 var pState : animEnum;
 
+// Audio
+var volumeModifier = 1.0  ;
+var soundFXRandom  = 0.05 ;
+
 function Awake(){
-  cObject  = newGameObject = Instantiate(Resources.Load(pIdle.tag)) ; 
+  cObject  = newGameObject = Instantiate(Resources.Load(pIdle.name)) ; 
   timeInit = resetTime()                                            ;
   kTimeD   = 0.5                                                    ;
 }
@@ -27,37 +33,46 @@ function Awake(){
 function LateUpdate () {                                       //Switching out animation as necessary
   timeDelta = deltaTime(timeInit); 
   if(timeDelta>kTimeD){                                        //Delaying state changes per Prefab 
-    cState  = cObject.GetComponent(Unit_IO_State).animState ; //returns prefab animEnum 
+    cState  = cObject.GetComponent(Unit_IO_State).animState ;  //returns prefab animEnum 
     if(cState==animEnum.jump && pState!=animEnum.jump){
-      cObject  = cObjectUpdate(pJump.tag) ;                    //must be tags, unable to determine instance name
+      cObject  = cObjectUpdate(pJump.name) ;   
     }
     else if(cState==animEnum.idle && pState!=animEnum.idle){
-      cObject  = cObjectUpdate(pIdle.tag) ;
+      cObject  = cObjectUpdate(pIdle.name) ;
     }
     else if(cState==animEnum.duck && pState!=animEnum.duck){
-      cObject = cObjectUpdate(pDuck.tag) ;
+      cObject = cObjectUpdate(pDuck.name) ;
     }
     else if(cState==animEnum.fall && pState!=animEnum.fall){
-      cObject = cObjectUpdate(pFall.tag) ;
+      cObject = cObjectUpdate(pFall.name) ;
     }
     else if(cState==animEnum.duck && pState!=animEnum.duck){
-      cObject = cObjectUpdate(pDuck.tag) ;
+      cObject = cObjectUpdate(pDuck.name) ;
     }
   }
 }
 
-function cObjectUpdate(oTag){ //Watch out spaghetti side effects : cObject, Unit_IO_State and timeInit
+// Instances from Resources folder and swaps out
+function cObjectUpdate(oName){ //Watch out spaghetti side effects : cObject, Unit_IO_State and timeInit
   cObject.active = false                                                                           ;
   Destroy(cObject)                                                                                 ;
   var xformTemp        = cObject.transform                                                         ;
   xformTemp.position.z = -1.0                                                                      ;
   var gravityTemp      = cObject.GetComponent(Unit_IO_State).gravity                               ;
-  cObject              = Instantiate(Resources.Load(oTag), xformTemp.position, xformTemp.rotation) ;
+  cObject              = Instantiate(Resources.Load(oName), xformTemp.position, xformTemp.rotation) ;
   var unit             = cObject.GetComponent(Unit_IO_State)                                       ;
   unit.gravity         = gravityTemp                                                               ;
   kTimeD               = unit.kTime                                                                ;
   timeInit             = resetTime()                                                               ;
   pState               = cState                                                                    ;
+
+  audio.clip = unit.soundFX;
+  if(audio.clip!=null){
+    audio.volume = 1.0*volumeModifier                                 ;
+    audio.pitch  = Random.Range(1.0-soundFXRandom, 1.0+soundFXRandom) ;
+    audio.Play()                                                      ;
+  }
+
   return cObject                                                                                   ;
 }
 
