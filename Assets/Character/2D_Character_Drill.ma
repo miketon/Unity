@@ -1,6 +1,6 @@
 //Maya ASCII 2013 scene
 //Name: 2D_Character_Drill.ma
-//Last modified: Sat, Dec 01, 2012 01:00:09 AM
+//Last modified: Sun, Dec 02, 2012 03:10:49 PM
 //Codeset: UTF-8
 requires maya "2013";
 requires "stereoCamera" "10.0";
@@ -13,7 +13,7 @@ fileInfo "osv" "Mac OS X 10.8.2";
 fileInfo "license" "student";
 createNode transform -s -n "persp";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 2.3303534724821651 0.40720543436539147 -1.4788874407715322 ;
+	setAttr ".t" -type "double3" 2.3303534724821651 0.40720543436539142 -1.4788874407715322 ;
 	setAttr ".r" -type "double3" 8.3999999999996042 122.39999999999584 0 ;
 	setAttr ".rp" -type "double3" 1.3010439304715856e-17 0 -8.8817841970012523e-16 ;
 	setAttr ".rpt" -type "double3" -1.5055564417504711e-14 3.099022221737603e-15 1.3916949204600475e-14 ;
@@ -1260,7 +1260,7 @@ createNode script -n "uiConfigurationScriptNode";
 		+ "\t\t\t\t$configName;\n\n            setNamedPanelLayout (localizedPanelLabel(\"Current Layout\"));\n        }\n\n        panelHistory -e -clear mainPanelHistory;\n        setFocus `paneLayout -q -p1 $gMainPane`;\n        sceneUIReplacement -deleteRemaining;\n        sceneUIReplacement -clear;\n\t}\n\n\ngrid -spacing 5 -size 12 -divisions 5 -displayAxes yes -displayGridLines yes -displayDivisionLines yes -displayPerspectiveLabels no -displayOrthographicLabels no -displayAxesBold yes -perspectiveLabelPosition axis -orthographicLabelPosition edge;\nviewManip -drawCompass 0 -compassAngle 0 -frontParameters \"\" -homeParameters \"\" -selectionLockParameters \"\";\n}\n");
 	setAttr ".st" 3;
 createNode script -n "sceneConfigurationScriptNode";
-	setAttr ".b" -type "string" "playbackOptions -min 4 -max 5 -ast 1 -aet 48 ";
+	setAttr ".b" -type "string" "playbackOptions -min 4 -max 6 -ast 1 -aet 48 ";
 	setAttr ".st" 6;
 createNode cameraView -n "cameraView1";
 	setAttr ".e" -type "double3" 0.73534748753800372 1.3670985164125873 1.5626929931369933 ;
@@ -1646,8 +1646,8 @@ createNode animCurveTA -n "drillHead_rotateZ";
 	setAttr ".wgt" no;
 	setAttr -s 2 ".ktv[0:1]"  2 0 4 0;
 select -ne :time1;
-	setAttr ".o" 5;
-	setAttr ".unw" 5;
+	setAttr ".o" 6;
+	setAttr ".unw" 6;
 select -ne :renderPartition;
 	setAttr -s 3 ".st";
 select -ne :initialShadingGroup;

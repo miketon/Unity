@@ -24,7 +24,7 @@ ModelImporter:
     clipAnimations:
     - name: idle
       firstFrame: 4
-      lastFrame: 5
+      lastFrame: 6
       wrapMode: 1
       loop: 0
   meshes:

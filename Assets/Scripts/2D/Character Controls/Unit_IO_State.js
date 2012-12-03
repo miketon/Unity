@@ -4,6 +4,7 @@ enum animEnum{ //enumerates the possible state of player.  Outside of Class
   dash,
   duck,
   attk,
+  scrt,
   jump
 }
 
@@ -55,13 +56,18 @@ class Unit_IO_State extends Unit{
       if(Input.GetKey("down")){
         animState = animEnum.duck ;
       }
+      else if(Input.GetKey("up")){
+        animState = animEnum.attk;
+      }
+      else if(Input.GetKey(KeyCode.B&&KeyCode.H)){
+        animState = animEnum.scrt;
+      }
     }
     else if(control.velocity.y < -vy*3){
       // Debug.Log('Falling'+vy);
       animState = animEnum.fall;
     }
     if(Input.GetButton("Jump")){
-      // Debug.Log('Jumping'+vy);
       if(jumpCnt < doubleJump && vy>-0.1){
         jump      = true          ;
         jumpCnt   = jumpCnt +1    ;
@@ -69,10 +75,6 @@ class Unit_IO_State extends Unit{
       }
     }
     dash = Input.GetButton("Fire2");
-
-    if(Input.GetKey("up")){
-      animState = animEnum.attk;
-    }
 
     if(Input.GetButton("Fire1") && Time.time > nextFire){
       nextFire                 = Time.time + fireRate                                        ;
