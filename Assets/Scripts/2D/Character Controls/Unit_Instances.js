@@ -9,10 +9,7 @@ private var kTimeD      : float      ; //State lock of current instance
 var pFall : GameObject ; //Be sure to name each and place in 'Resources' folder
 var pIdle : GameObject ; //And check that pill collider encompass bottom of mesh
 var pDash : GameObject ; //Else collision floor error
-var pDuck : GameObject ;
 var pJump : GameObject ;
-var pAttk : GameObject ;
-var pScrt : GameObject ;
 
 var cState : animEnum;
 var pState : animEnum;
@@ -36,15 +33,6 @@ function LateUpdate () {                                       //Switching out a
     }
     else if(cState==animEnum.idle && pState!=animEnum.idle){
       cObject  = cObjectUpdate(pIdle.name) ;
-    }
-    else if(cState==animEnum.duck && pState!=animEnum.duck){
-      cObject = cObjectUpdate(pDuck.name) ;
-    }
-    else if(cState==animEnum.attk && pState!=animEnum.attk){
-      cObject = cObjectUpdate(pAttk.name) ;
-    }
-    else if(cState==animEnum.scrt && pState!=animEnum.scrt){
-      cObject = cObjectUpdate(pScrt.name) ;
     }
     else if(cState==animEnum.fall && pState!=animEnum.fall){
       cObject = cObjectUpdate(pFall.name) ;
