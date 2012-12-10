@@ -2,6 +2,9 @@ enum animEnum{ //enumerates the possible state of player.  Outside of Class
   fall,
   idle,
   dash,
+  duck,
+  attk,
+  scrt,
   jump
 }
 
@@ -50,6 +53,15 @@ class Unit_IO_State extends Unit{
     if(control.isGrounded){
       jumpCnt   = 0             ;
       animState = animEnum.idle ;
+      if(Input.GetKey("down")){
+        animState = animEnum.duck ;
+      }
+      else if(Input.GetKey("up")){
+        animState = animEnum.attk;
+      }
+      else if(Input.GetKey(KeyCode.B)&&Input.GetKey(KeyCode.H)){
+        animState = animEnum.scrt;
+      }
     }
     else if(control.velocity.y < -vy*3){
       // Debug.Log('Falling'+vy);

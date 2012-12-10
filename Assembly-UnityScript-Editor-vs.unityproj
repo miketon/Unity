@@ -46,16 +46,28 @@
   <ItemGroup>
      <Compile Include="Assets\Editor\EditorUtilityCollectDeepHierarchy.js" />
      <Compile Include="Assets\Editor\Editor_ApplyCollider.js" />
+     <Compile Include="Assets\Editor\SkyBoxGenerator.js" />
      <Compile Include="Assets\Editor\TwoDHelper.js" />
+     <None Include="Assets\Shaders\Examples_SurfaceShaders\diffuseNormal_RimLight_Detail_CubeRef_Clip.shader" />
      <None Include="Assets\Standard Assets\Toon Shading\Sources\Shaders\Toony-Basic.shader" />
      <None Include="Assets\Shaders\mton_CG.shader" />
+     <None Include="Assets\Shaders\mton_SampleFromDirLight.shader" />
+     <None Include="Assets\Shaders\Examples_SurfaceShaders\diffuseSimple.shader" />
+     <None Include="Assets\Shaders\Examples_SurfaceShaders\vertex_CustomData.shader" />
      <None Include="Assets\Standard Assets\Particles\Sources\Shaders\Particle Alpha Blend (Queue +100).shader" />
      <None Include="Assets\Audio\Effects\melee sounds\melee.txt" />
-     <None Include="Assets\Shaders\mton_CG_Zbrush.shader" />
-     <None Include="Assets\Standard Assets\Toon Shading\Sources\Shaders\Toony-BasicOutline.shader" />
+     <None Include="Assets\Shaders\Examples_SurfaceShaders\diffuseNormal.shader" />
+     <None Include="Assets\Standard Assets\Skyboxes\_skybox info.txt" />
+     <None Include="Assets\Shaders\Examples_SurfaceShaders\diffuseNormal_RimLight.shader" />
      <None Include="Assets\Shaders\mton_Test.shader" />
+     <None Include="Assets\Standard Assets\Toon Shading\Sources\Shaders\Toony-BasicOutline.shader" />
+     <None Include="Assets\Shaders\Examples_SurfaceShaders\vertex_NormalExtrusion.shader" />
+     <None Include="Assets\Shaders\Examples_SurfaceShaders\diffuseNormal_RimLight_Detail_CubeRef.shader" />
+     <None Include="Assets\Shaders\Examples_SurfaceShaders\diffuseTexture.shader" />
      <None Include="Assets\Standard Assets\Toon Shading\Sources\Shaders\Toony-LightedOutline.shader" />
      <None Include="Assets\Standard Assets\Toon Shading\Sources\Shaders\Toony-Lighted.shader" />
+     <None Include="Assets\Shaders\mton_CG_Zbrush.shader" />
+     <None Include="Assets\Shaders\Examples_SurfaceShaders\diffuseNormal_RimLight_Detail.shader" />
  <Reference Include="Library\ScriptAssemblies\Assembly-UnityScript-firstpass">
  <HintPath>Library\ScriptAssemblies\Assembly-UnityScript-firstpass.dll</HintPath>
  </Reference>
