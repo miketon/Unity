@@ -1,31 +1,309 @@
 fileFormatVersion: 2
 guid: 13aaf50edd0f840b6a0474f0137e4b17
 ModelImporter:
-  fileIDToRecycleName: {}
-  serializedVersion: 10
+  serializedVersion: 15
+  fileIDToRecycleName:
+    100000: cgfxlightncamera:pointLight1
+    100002: cnt_charRoot
+    100004: cnt_charRoot_ZERO_NODE_DNT
+    100006: cnt_COG
+    100008: cnt_COG_ZERO_NODE_DNT
+    100010: cnt_Head_1_Loc
+    100012: cnt_Head_1_Loc_ZERO_NODE_DNT
+    100014: cnt_HipLocator
+    100016: cnt_HipLocator_ZERO_NODE_DNT
+    100018: cnt_L_foot_Group
+    100020: cnt_L_foot_Group_ZERO_NODE_DNT
+    100022: cnt_L_shoulder_Loc
+    100024: cnt_L_shoulder_Loc_ZERO_NODE_DNT
+    100026: cnt_L_wrist_World
+    100028: cnt_L_wrist_World_ZERO_NODE_DNT
+    100030: cnt_L_wristIK_Loc
+    100032: cnt_L_wristIK_Loc_ZERO_NODE_DNT
+    100034: cnt_L_wristIK_poleConstraint
+    100036: cnt_L_wristIK_poleConstraint_ZERO_NODE_DNT
+    100038: cnt_MidBackLocator
+    100040: cnt_MidBackLocator_ZERO_NODE_DNT
+    100042: cnt_Neck_1_Loc
+    100044: cnt_Neck_1_Loc_ZERO_NODE_DNT
+    100046: cnt_R_foot_Group
+    100048: cnt_R_foot_Group_ZERO_NODE_DNT
+    100050: cnt_R_shoulder_Loc
+    100052: cnt_R_shoulder_Loc_ZERO_NODE_DNT
+    100054: cnt_R_wrist_World
+    100056: cnt_R_wrist_World_ZERO_NODE_DNT
+    100058: cnt_R_wristIK_Loc
+    100060: cnt_R_wristIK_Loc_ZERO_NODE_DNT
+    100062: cnt_R_wristIK_poleConstraint
+    100064: cnt_R_wristIK_poleConstraint_ZERO_NODE_DNT
+    100066: cnt_UpperBody
+    100068: cnt_UpperBody_ZERO_NODE_DNT
+    100070: Collar
+    100072: CollarGRP
+    100074: CollarIK
+    100076: Head_1
+    100078: hnd_L_ankle
+    100080: hnd_L_ball
+    100082: hnd_L_toe
+    100084: hnd_R_ankle
+    100086: hnd_R_ball
+    100088: hnd_R_toe
+    100090: jStick_L_wrist
+    100092: jStick_L_wrist_posNode
+    100094: jStick_L_wrist_posNode_ZERO_NODE_DNT
+    100096: jStick_R_wrist
+    100098: jStick_R_wrist_posNode
+    100100: jStick_R_wrist_posNode_ZERO_NODE_DNT
+    100102: L_ankle
+    100104: L_ankle_Pivot
+    100106: L_ankle_Pivot_ZERO_NODE_DNT
+    100108: L_ball
+    100110: L_collar
+    100112: L_elbow
+    100114: L_forearm
+    100116: L_heel
+    100118: L_heel_Pivot
+    100120: L_heel_Pivot_ZERO_NODE_DNT
+    100122: L_hip
+    100124: L_index_1
+    100126: L_index_2
+    100128: L_index_end
+    100130: L_knee
+    100132: L_middle_1
+    100134: L_middle_2
+    100136: L_middle_end
+    100138: L_pinky_1
+    100140: L_pinky_2
+    100142: L_pinky_end
+    100144: L_ring_1
+    100146: L_ring_2
+    100148: L_ring_end
+    100150: L_shoulder
+    100152: L_thumb_1
+    100154: L_thumb_2
+    100156: L_thumb_end
+    100158: L_toe
+    100160: L_toe_Group
+    100162: L_toe_Group_ZERO_NODE_DNT
+    100164: L_toe_Pivot
+    100166: L_toe_Pivot_ZERO_NODE_DNT
+    100168: L_wrist
+    100170: L_wrist_dispNode
+    100172: L_wristIK
+    100174: MidBackGRP
+    100176: MidBackIK
+    100178: MidRot
+    100180: Neck_1
+    100182: Psylocke_hair
+    100184: //RootNode
+    100186: Psylocke_New
+    100188: Psylocke_Shoes
+    100190: R_ankle
+    100192: R_ankle_Pivot
+    100194: R_ankle_Pivot_ZERO_NODE_DNT
+    100196: R_ball
+    100198: R_collar
+    100200: R_elbow
+    100202: R_forearm
+    100204: R_heel
+    100206: R_heel_Pivot
+    100208: R_heel_Pivot_ZERO_NODE_DNT
+    100210: R_hip
+    100212: R_index_1
+    100214: R_index_2
+    100216: R_index_end
+    100218: R_knee
+    100220: R_middle_1
+    100222: R_middle_2
+    100224: R_middle_end
+    100226: R_pinky_1
+    100228: R_pinky_2
+    100230: R_pinky_end
+    100232: R_ring_1
+    100234: R_ring_2
+    100236: R_ring_end
+    100238: R_shoulder
+    100240: R_thumb_1
+    100242: R_thumb_2
+    100244: R_thumb_end
+    100246: R_toe
+    100248: R_toe_Group
+    100250: R_toe_Group_ZERO_NODE_DNT
+    100252: R_toe_Pivot
+    100254: R_toe_Pivot_ZERO_NODE_DNT
+    100256: R_wrist
+    100258: R_wrist_dispNode
+    100260: R_wristIK
+    100262: Skeleton_Root
+    100264: Spine_1
+    100266: Spine_2
+    400000: cgfxlightncamera:pointLight1
+    400002: cnt_charRoot
+    400004: cnt_charRoot_ZERO_NODE_DNT
+    400006: cnt_COG
+    400008: cnt_COG_ZERO_NODE_DNT
+    400010: cnt_Head_1_Loc
+    400012: cnt_Head_1_Loc_ZERO_NODE_DNT
+    400014: cnt_HipLocator
+    400016: cnt_HipLocator_ZERO_NODE_DNT
+    400018: cnt_L_foot_Group
+    400020: cnt_L_foot_Group_ZERO_NODE_DNT
+    400022: cnt_L_shoulder_Loc
+    400024: cnt_L_shoulder_Loc_ZERO_NODE_DNT
+    400026: cnt_L_wrist_World
+    400028: cnt_L_wrist_World_ZERO_NODE_DNT
+    400030: cnt_L_wristIK_Loc
+    400032: cnt_L_wristIK_Loc_ZERO_NODE_DNT
+    400034: cnt_L_wristIK_poleConstraint
+    400036: cnt_L_wristIK_poleConstraint_ZERO_NODE_DNT
+    400038: cnt_MidBackLocator
+    400040: cnt_MidBackLocator_ZERO_NODE_DNT
+    400042: cnt_Neck_1_Loc
+    400044: cnt_Neck_1_Loc_ZERO_NODE_DNT
+    400046: cnt_R_foot_Group
+    400048: cnt_R_foot_Group_ZERO_NODE_DNT
+    400050: cnt_R_shoulder_Loc
+    400052: cnt_R_shoulder_Loc_ZERO_NODE_DNT
+    400054: cnt_R_wrist_World
+    400056: cnt_R_wrist_World_ZERO_NODE_DNT
+    400058: cnt_R_wristIK_Loc
+    400060: cnt_R_wristIK_Loc_ZERO_NODE_DNT
+    400062: cnt_R_wristIK_poleConstraint
+    400064: cnt_R_wristIK_poleConstraint_ZERO_NODE_DNT
+    400066: cnt_UpperBody
+    400068: cnt_UpperBody_ZERO_NODE_DNT
+    400070: Collar
+    400072: CollarGRP
+    400074: CollarIK
+    400076: Head_1
+    400078: hnd_L_ankle
+    400080: hnd_L_ball
+    400082: hnd_L_toe
+    400084: hnd_R_ankle
+    400086: hnd_R_ball
+    400088: hnd_R_toe
+    400090: jStick_L_wrist
+    400092: jStick_L_wrist_posNode
+    400094: jStick_L_wrist_posNode_ZERO_NODE_DNT
+    400096: jStick_R_wrist
+    400098: jStick_R_wrist_posNode
+    400100: jStick_R_wrist_posNode_ZERO_NODE_DNT
+    400102: L_ankle
+    400104: L_ankle_Pivot
+    400106: L_ankle_Pivot_ZERO_NODE_DNT
+    400108: L_ball
+    400110: L_collar
+    400112: L_elbow
+    400114: L_forearm
+    400116: L_heel
+    400118: L_heel_Pivot
+    400120: L_heel_Pivot_ZERO_NODE_DNT
+    400122: L_hip
+    400124: L_index_1
+    400126: L_index_2
+    400128: L_index_end
+    400130: L_knee
+    400132: L_middle_1
+    400134: L_middle_2
+    400136: L_middle_end
+    400138: L_pinky_1
+    400140: L_pinky_2
+    400142: L_pinky_end
+    400144: L_ring_1
+    400146: L_ring_2
+    400148: L_ring_end
+    400150: L_shoulder
+    400152: L_thumb_1
+    400154: L_thumb_2
+    400156: L_thumb_end
+    400158: L_toe
+    400160: L_toe_Group
+    400162: L_toe_Group_ZERO_NODE_DNT
+    400164: L_toe_Pivot
+    400166: L_toe_Pivot_ZERO_NODE_DNT
+    400168: L_wrist
+    400170: L_wrist_dispNode
+    400172: L_wristIK
+    400174: MidBackGRP
+    400176: MidBackIK
+    400178: MidRot
+    400180: Neck_1
+    400182: Psylocke_hair
+    400184: //RootNode
+    400186: Psylocke_New
+    400188: Psylocke_Shoes
+    400190: R_ankle
+    400192: R_ankle_Pivot
+    400194: R_ankle_Pivot_ZERO_NODE_DNT
+    400196: R_ball
+    400198: R_collar
+    400200: R_elbow
+    400202: R_forearm
+    400204: R_heel
+    400206: R_heel_Pivot
+    400208: R_heel_Pivot_ZERO_NODE_DNT
+    400210: R_hip
+    400212: R_index_1
+    400214: R_index_2
+    400216: R_index_end
+    400218: R_knee
+    400220: R_middle_1
+    400222: R_middle_2
+    400224: R_middle_end
+    400226: R_pinky_1
+    400228: R_pinky_2
+    400230: R_pinky_end
+    400232: R_ring_1
+    400234: R_ring_2
+    400236: R_ring_end
+    400238: R_shoulder
+    400240: R_thumb_1
+    400242: R_thumb_2
+    400244: R_thumb_end
+    400246: R_toe
+    400248: R_toe_Group
+    400250: R_toe_Group_ZERO_NODE_DNT
+    400252: R_toe_Pivot
+    400254: R_toe_Pivot_ZERO_NODE_DNT
+    400256: R_wrist
+    400258: R_wrist_dispNode
+    400260: R_wristIK
+    400262: Skeleton_Root
+    400264: Spine_1
+    400266: Spine_2
+    2300000: Psylocke_hair
+    2300002: Psylocke_Shoes
+    3300000: Psylocke_hair
+    3300002: Psylocke_Shoes
+    4300000: Psylocke_hair
+    4300002: Psylocke_New
+    4300004: Psylocke_Shoes
+    7400000: Take 001
+    11100000: //RootNode
+    13700000: Psylocke_New
   materials:
     importMaterials: 1
     materialName: 0
     materialSearch: 1
   animations:
-    generateAnimations: 3
+    legacyGenerateAnimations: 3
     bakeSimulation: 0
-    splitAnimations: 1
     animationCompression: 1
     animationRotationError: .5
     animationPositionError: .5
     animationScaleError: .5
     animationWrapMode: 0
     clipAnimations: []
+    isReadable: 1
   meshes:
     lODScreenPercentages: []
-    globalScale: 0
+    globalScale: 1
     meshCompression: 0
     addColliders: 0
-    swapUVChannels: 1
+    swapUVChannels: 0
     generateSecondaryUV: 0
     useFileUnits: 1
-    optimizeMesh: 0
+    optimizeMeshForGPU: 1
     secondaryUVAngleDistortion: 8
     secondaryUVAreaDistortion: 15.000001
     secondaryUVHardAngle: 88
@@ -35,4 +313,21 @@ ModelImporter:
     splitTangentsAcrossUV: 1
     normalImportMode: 0
     tangentImportMode: 1
-  textMetaNamesToFileIDs: {}
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    handles: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  additionalBone: 1
+  animationType: 1
+  userData: 
