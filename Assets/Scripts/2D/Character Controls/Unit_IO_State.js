@@ -45,11 +45,11 @@ class Unit_IO_State extends Unit{
   function Start(){
     super.Start()                                               ;
     transform.rotation = Quaternion.LookRotation(Vector3.right) ; //start facing forward
-    if(animState == animEnum.idle){   //Check if object on ground
+    // if(animState == animEnum.idle){   //Check if object on ground
       animation["walk"].speed = 1.15 ; //Modify animation speeds on startup
-      animation["duck"].speed = 0.5 ; //Modify animation speeds on startup
-      animation["jump"].speed = 2.5 ; //Modify animation speeds on startup
-    }
+      animation["duck"].speed = 1.75 ; //Modify animation speeds on startup
+      animation["jump"].speed = 0.5 ; //Modify animation speeds on startup
+    // }
   }
   
   function LockControls(animClip){
@@ -91,7 +91,7 @@ class Unit_IO_State extends Unit{
             animation.CrossFade("walk", 0.1);
           }
           else if(Input.GetKey("down")){
-            animation.CrossFade("duck", 0.1);
+            animation.Play("duck");
             // print("down");
           }
         }
@@ -99,14 +99,15 @@ class Unit_IO_State extends Unit{
       }
       else if(control.velocity.y < -vy*3){
         // animState = animEnum.fall;
-        animation.CrossFade("fall", 0.1);
+        animation.CrossFadeQueued("fall", 0.1);
       }
       if(Input.GetButton("Jump")){
         if(jumpCnt < doubleJump && vy>-0.1){
           jump      = true          ;
           jumpCnt   = jumpCnt +1    ;
           // animState = animEnum.jump ;
-          animation.CrossFade("jump", 0.1);
+          // animation.CrossFade("jump", 0.1);
+          animation.Play("jump");
         }
       }
       if(Input.GetButton("Fire1") && Time.time > nextFire){
