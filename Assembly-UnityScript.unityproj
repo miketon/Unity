@@ -59,6 +59,7 @@
      <Compile Include="Assets\Scripts\2D\Character Controls\Unit_IO_State_UFO.js" />
      <Compile Include="Assets\Scripts\2D\Character Controls\Unit_Instances.js" />
      <Compile Include="Assets\Scripts\2D\Character Controls\aim.js" />
+     <Compile Include="Assets\Scripts\2D\Character Controls\clothState.js" />
      <Compile Include="Assets\Scripts\2D\Character Controls\explode.js" />
      <Compile Include="Assets\Scripts\2D\Character Controls\vectorLerp.js" />
      <Compile Include="Assets\Scripts\2D\DeathTrigger.js" />

@@ -43,7 +43,7 @@ class Unit_IO_State_Liefeld extends Unit_IO_State{
         animState = animEnum.idle ;
       }
       else if(control.velocity.y < -vy*3){
-        animation.CrossFadeQueued("fall", 0.1);
+        animation.CrossFade("fall", 0.3);
       }
       if(Input.GetButton("Jump")){
         if(jumpCnt < doubleJump && vy>-0.1){
