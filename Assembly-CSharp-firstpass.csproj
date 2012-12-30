@@ -45,6 +45,19 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\Standard Assets\Character Controllers\Sources\Scripts\MouseLook.cs" />
+     <Compile Include="Assets\Standard Assets\Detonator\System\Detonator.cs" />
+     <Compile Include="Assets\Standard Assets\Detonator\System\DetonatorBurstEmitter.cs" />
+     <Compile Include="Assets\Standard Assets\Detonator\System\DetonatorCloudRing.cs" />
+     <Compile Include="Assets\Standard Assets\Detonator\System\DetonatorFireball.cs" />
+     <Compile Include="Assets\Standard Assets\Detonator\System\DetonatorForce.cs" />
+     <Compile Include="Assets\Standard Assets\Detonator\System\DetonatorGlow.cs" />
+     <Compile Include="Assets\Standard Assets\Detonator\System\DetonatorHeatwave.cs" />
+     <Compile Include="Assets\Standard Assets\Detonator\System\DetonatorLight.cs" />
+     <Compile Include="Assets\Standard Assets\Detonator\System\DetonatorShockwave.cs" />
+     <Compile Include="Assets\Standard Assets\Detonator\System\DetonatorSmoke.cs" />
+     <Compile Include="Assets\Standard Assets\Detonator\System\DetonatorSound.cs" />
+     <Compile Include="Assets\Standard Assets\Detonator\System\DetonatorSparks.cs" />
+     <Compile Include="Assets\Standard Assets\Detonator\System\DetonatorSpray.cs" />
      <None Include="Assets\Shaders\Examples_SurfaceShaders\diffuseNormal_RimLight_Detail_CubeRef_Clip.shader" />
      <None Include="Assets\Standard Assets\Toon Shading\Sources\Shaders\Toony-Basic.shader" />
      <None Include="Assets\Shaders\mton_CG.shader" />
@@ -54,6 +67,7 @@
      <None Include="Assets\Standard Assets\Particles\Sources\Shaders\Particle Alpha Blend (Queue +100).shader" />
      <None Include="Assets\Audio\Effects\melee sounds\melee.txt" />
      <None Include="Assets\Shaders\Examples_SurfaceShaders\diffuseNormal.shader" />
+     <None Include="Assets\Standard Assets\Detonator\Resources\Detonator\Textures\HeatDistort.shader" />
      <None Include="Assets\Standard Assets\Skyboxes\_skybox info.txt" />
      <None Include="Assets\Shaders\Examples_SurfaceShaders\diffuseNormal_RimLight.shader" />
      <None Include="Assets\Shaders\mton_Test.shader" />

@@ -22,9 +22,9 @@ var volumeModifier = 1.0  ;
 var soundFXRandom  = 0.05 ;
 
 function Awake(){
-  cObject  = newGameObject = Instantiate(Resources.Load(pIdle.name)) ; 
-  timeInit = resetTime()                                            ;
-  kTimeD   = 0.5                                                    ;
+  cObject  = newGameObject = Instantiate(Resources.Load(pIdle.name)) ;
+  timeInit = resetTime()                                             ;
+  kTimeD   = 0.5                                                     ;
 }
 
 function LateUpdate () {                                       //Switching out animation as necessary

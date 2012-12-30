@@ -8,60 +8,57 @@ enum animEnum{ //enumerates the possible state of player.  Outside of Class
   jump
 }
 
+class UnitCamera_2D{
+  var offSet : Vector3 = Vector3(0.0, 0.5, -10.0) ;
+}
+
+class Unit_UI{
+  var energy : float = 0.0;
+}
+
 class Unit_IO_State extends Unit{
 
   static var initMe   : boolean = true ; //static == class variable?
   static var pCamera  : GameObject     ;
   static var pCurrent : GameObject     ;
-  var jumpCnt  : int   = 0      ;
-
-  protected var accel   : float = 0.025 ;
-  protected var decel   : float = 0.025 ;
-
-  private var boolControl : boolean = true ; //Will obj accept controller input?
-  private var nextFire    : float   = 0    ;
-
-  var bullet   : GameObject  ;
-  var soundFX  : AudioClip   ;
-  var fireRate : float = 0.5 ;
-
-  var flipSpeed  : float = 50.0 ;
-  var hAxis :float = 0.0 ; //controller horizontal axis
-  var hFlip :float = 1.0 ; 
-  var doubleJump : int   = 1    ;
 
   var camera2D  : UnitCamera_2D ;
+  var playerUI  : Unit_UI       ;
   var animState : animEnum      ; //To be accessed by subclasses ; !protected/private
-  var kTime     : float = 0.5   ; //Time to hold before eligible for instance swap out.Prevent jutter.  
+
+  protected var boolControl : boolean = true ; //Will obj accept controller input?
+  protected var nextFire    : float   = 0    ;
+
+  var bullet   : GameObject  ;
+  var fireRate : float = 0.5 ;
+
+  var flipSpeed : float = 50.0 ;
+  var hAxis     : float = 0.0  ; //controller horizontal axis
+  var hFlip     : float = 1.0  ;
+
+  var doubleJump : int   = 1   ;
+  var jumpCnt    : int   = 0   ;
+  var kTime      : float = 0.5 ; //Time to hold before eligible for instance swap out.Prevent jutter.
 
   function Awake(){
     if(initMe){
       pCamera            = LoadGameObject_mt("MainCamera")                 ;
       transform.position = LoadGameObject_mt("Respawn").transform.position ;
+      transform.rotation = Quaternion.LookRotation(Vector3.right)          ; //start facing forward
       initMe             = false                                           ;
     }
   }
 
   function Start(){
     super.Start()                                               ;
-    transform.rotation = Quaternion.LookRotation(Vector3.right) ; //start facing forward
-    // if(animState == animEnum.idle){   //Check if object on ground
-      animation["walk"].speed = 1.15 ; //Modify animation speeds on startup
-      animation["duck"].speed = 1.75 ; //Modify animation speeds on startup
-      animation["jump"].speed = 0.5 ; //Modify animation speeds on startup
-    // }
-  }
-  
-  function LockControls(animClip){
-    animation.Play(animClip)                                                 ;
-    boolControl  = false                                                     ;
-    var duration = animation[animClip].length/animation[animClip].speed      ;
-  	yield WaitForSeconds (duration)                                          ;
-  	boolControl = true                                                       ;
-  	// Debug.Log("Do "+duration+" seconds later" + animation[animClip].clip) ;
   }
 
   function Update(){
+    doUpdate()     ;
+    super.Update() ;
+  }
+
+  function doUpdate(){
     //Check for up keys first...possible to miss in nest
     if(Input.GetKeyUp("down")){ 
       // LockControls("duckpopup") ; 
@@ -98,15 +95,12 @@ class Unit_IO_State extends Unit{
         animState = animEnum.idle ;
       }
       else if(control.velocity.y < -vy*3){
-        // animState = animEnum.fall;
         animation.CrossFadeQueued("fall", 0.1);
       }
       if(Input.GetButton("Jump")){
         if(jumpCnt < doubleJump && vy>-0.1){
           jump      = true          ;
           jumpCnt   = jumpCnt +1    ;
-          // animState = animEnum.jump ;
-          // animation.CrossFade("jump", 0.1);
           animation.Play("jump");
         }
       }
@@ -120,12 +114,27 @@ class Unit_IO_State extends Unit{
       if(dash){
         animState = animEnum.scrt;
       }
-      super.Update() ;
     }
   }
 
+  // update UI + stats
+  function updateUI(){
+    if(Input.GetKey("down")){
+      playerUI.energy += 0.05;
+    }
+    else if(Input.GetKeyUp("down")){
+      playerUI.energy = 0.0;
+    }
+    GUI.Box(Rect(10, 10, 220, 40), "Energy")                                ;
+    GUI.HorizontalSlider(Rect(20, 30, 200, 300), playerUI.energy, 0.0, 1.0) ;
+  }
+
+  function OnGUI(){
+    updateUI();
+  }
+
+  // update camera 
   function LateUpdate () {
-    // var velocityCam         = Vector3.zero                                                                 ;
     var velocityCam            = Vector3(0.0, 0.0, 3.0)                                                       ;
     var offSetCam              = camera2D.offSet                                                              ;
     offSetCam.x               *= hFlip                                                                        ;
@@ -134,10 +143,13 @@ class Unit_IO_State extends Unit{
     pCamera.transform.position = Vector3.SmoothDamp(pCamera.transform.position, camPoint, velocityCam, 0.075) ;
   }
 
-  class UnitCamera_2D{
-    var offSet : Vector3 = Vector3(0.0, 0.5, -10.0) ;
-    // var zDepth : float   = -10.0                    ;
-    // var zSpeed : float   = 10.0                     ;
+  function LockControls(animClip){
+    animation.Play(animClip)                                                 ;
+    boolControl  = false                                                     ;
+    var duration = animation[animClip].length/animation[animClip].speed      ;
+  	yield WaitForSeconds (duration)                                          ;
+  	boolControl = true                                                       ;
+  	// Debug.Log("Do "+duration+" seconds later" + animation[animClip].clip) ;
   }
 
   function deltaToZero(value, k){

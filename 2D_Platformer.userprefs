@@ -2,8 +2,35 @@
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.Workbench ActiveDocument="../../../../Downloads/Chapter Two/Basic2DGameStarter/Assets/Scripts/fire_Projectile.js">
     <Files>
-      <File FileName="../../../../Downloads/Chapter Two/Basic2DGameStarter/Assets/Scripts/fire_Projectile.js" Line="17" Column="38" />
+      <File FileName="../../../../Downloads/Chapter Two/Basic2DGameStarter/Assets/Scripts/fire_Projectile.js" Line="22" Column="2" />
+      <File FileName="Assets/Shaders/mton_CG_Zbrush.shader" Line="1" Column="1" />
+      <File FileName="Assets/Shaders/Examples_SurfaceShaders/vertex_NormalExtrusion.shader" Line="1" Column="1" />
+      <File FileName="Assets/Shaders/Examples_SurfaceShaders/vertex_CustomData.shader" Line="1" Column="1" />
+      <File FileName="Assets/Shaders/Examples_SurfaceShaders/diffuseNormal_RimLight.shader" Line="1" Column="1" />
+      <File FileName="Assets/Shaders/Examples_SurfaceShaders/backFaceOn.shader" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/2D/Character Controls/Unit_IO_State.js" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/2D/Character Controls/Unit_Instances.js" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/2D/Character Controls/Unit.js" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/2D/Character Controls/UI_meter.js" Line="12" Column="2" />
+      <File FileName="Assets/Scripts/2D/Character Controls/Unit_IO_State_Duck.js" Line="1" Column="1" />
     </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State expanded="True">
+          <Node name="Assembly-UnityScript" expanded="True">
+            <Node name="Assets" expanded="True">
+              <Node name="Scripts" expanded="True">
+                <Node name="2D" expanded="True">
+                  <Node name="Character Controls" expanded="True">
+                    <Node name="Unit_IO_State_Duck.js" selected="True" />
+                  </Node>
+                </Node>
+              </Node>
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />

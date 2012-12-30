@@ -7,8 +7,9 @@ protected var acclVec : Vector3 = Vector3.zero ;
 protected var dash : boolean = false ;
 protected var vy   : float   = 0.0   ;
 
-var gravity   : Vector3 = Vector3.zero ;
-var jump      : boolean = false        ;
+var soundFX : AudioClip              ;
+var gravity : Vector3 = Vector3.zero ;
+var jump    : boolean = false        ;
 
 var moveSpeed : float = 8.0    ;
 var dashSpeed : float = 3      ;
@@ -58,3 +59,4 @@ function LoadGameObject_mt(objName){                              //MUST: ObjNam
   }
   return newGameObject;
 }
+
