@@ -8,4 +8,5 @@ Temp
 *.sln
 *.exe
 *.swp
+*.DS_Store
 Thumbs.db

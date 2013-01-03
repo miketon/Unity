@@ -1,13 +1,3 @@
-enum animEnum{ //enumerates the possible state of player.  Outside of Class
-  fall,
-  idle,
-  dash,
-  duck,
-  attk,
-  scrt,
-  jump
-}
-
 class UnitCamera_2D{
   var offSet : Vector3 = Vector3(0.0, 0.5, -10.0) ;
 }
@@ -26,19 +16,18 @@ class Unit_IO_State extends Unit{
   var playerUI  : Unit_UI       ;
   var animState : animEnum      ; //To be accessed by subclasses ; !protected/private
 
+  protected var hFlip       : float = 1.0    ; //which side is character facing
+  protected var hAxis       : float = 0.0    ; //controller horizontal axis
   protected var boolControl : boolean = true ; //Will obj accept controller input?
   protected var nextFire    : float   = 0    ;
 
   var bullet   : GameObject  ;
   var fireRate : float = 0.5 ;
 
-  var flipSpeed : float = 50.0 ;
-  var hAxis     : float = 0.0  ; //controller horizontal axis
-  var hFlip     : float = 1.0  ;
-
-  var doubleJump : int   = 1   ;
-  var jumpCnt    : int   = 0   ;
-  var kTime      : float = 0.5 ; //Time to hold before eligible for instance swap out.Prevent jutter.
+  var flipSpeed  : float = 50.0 ;
+  var doubleJump : int   = 1    ;
+  var jumpCnt    : int   = 0    ;
+  var kTime      : float = 0.5  ; //Time to hold before eligible for instance swap out.Prevent jutter.
 
   function Awake(){
     if(initMe){
@@ -135,6 +124,7 @@ class Unit_IO_State extends Unit{
 
   // update camera 
   function LateUpdate () {
+    hFlip                      = Mathf.Round(this.transform.rotation.y)                                       ;
     var velocityCam            = Vector3(0.0, 0.0, 3.0)                                                       ;
     var offSetCam              = camera2D.offSet                                                              ;
     offSetCam.x               *= hFlip                                                                        ;

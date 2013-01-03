@@ -383,7 +383,7 @@ ModelImporter:
     4300002: Mal_Liefeld_Color_Clothes
     4300004: coat_Tail
     4300006: coat2
-    7400000: Take 001
+    7400000: run
     7400002: idle
     7400004: duck
     7400006: walk
@@ -521,6 +521,28 @@ ModelImporter:
       firstFrame: 150
       lastFrame: 155
       wrapMode: 1
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      keepAdditionalBonesAnimation: 1
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      skeletonMaskElements: []
+    - name: run
+      takeName: Take 001
+      firstFrame: 170
+      lastFrame: 182
+      wrapMode: 2
       orientationOffsetY: 0
       level: 0
       cycleOffset: 0

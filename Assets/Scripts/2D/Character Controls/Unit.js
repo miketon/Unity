@@ -1,5 +1,15 @@
 @script RequireComponent(CharacterController);
 
+enum animEnum{ //enumerates the possible state of player.  Outside of Class
+  fall,
+  idle,
+  dash,
+  duck,
+  attk,
+  scrt,
+  jump
+}
+
 protected var control : CharacterController    ;
 protected var move    : Vector3 = Vector3.zero ;
 protected var acclVec : Vector3 = Vector3.zero ;
@@ -49,6 +59,10 @@ function Update(){
   move *= moveSpeed ;
 
   control.Move(move * Time.deltaTime);
+}
+
+function onHit(){
+  print("I am hit: "+ this.name);
 }
 
 function LoadGameObject_mt(objName){                              //MUST: ObjName == TagName
