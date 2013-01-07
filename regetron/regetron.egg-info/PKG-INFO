@@ -1,0 +1,11 @@
+Metadata-Version: 1.0
+Name: regetron
+Version: 1.4
+Summary: regetron is a simple shell for playing with regular expressions
+Home-page: https://gitorious.org/regetron/regetron
+Author: Zed A. Shaw
+Author-email: zedshaw@zedshaw.com
+License: UNKNOWN
+Download-URL: http://pypi.python.org/pypi/regetron
+Description: UNKNOWN
+Platform: UNKNOWN
