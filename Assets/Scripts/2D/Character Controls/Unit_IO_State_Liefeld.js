@@ -37,6 +37,10 @@ class Unit_IO_State_Liefeld extends Unit_IO_State{
           else if(Input.GetKey("down")){
             animation.Play("duck");
           }
+          else if(Input.GetKey("up")){
+            animation.Play("attack");
+          }
+
         }
         animState = animEnum.idle ;
       }
